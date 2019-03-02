@@ -23,7 +23,7 @@ public final class Engine {
 		isRunning = true;
 	}
 	
-	
+	//TIME THREAD NEXT -->//
 	private void run() {
 		while(!isClosed) {
 	
@@ -52,5 +52,8 @@ public final class Engine {
 		
 		
 		paintTool.draw(drawables);
+	}
+	public boolean isRunning() {
+		return isRunning;
 	}
 }
