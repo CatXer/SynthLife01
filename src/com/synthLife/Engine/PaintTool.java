@@ -38,15 +38,15 @@ public class PaintTool extends JFrame{
 	
 	private class PaintPanel extends JPanel{
 		PaintPanel(){
-			setBackground(Color.blue);
+			//setBackground(Color.blue);
 		}
 		
-		@Override
-		public void paintComponent(Graphics g) {
-			for(Drawable d:drawables) {
-				d.drawIt(g);
-			}
-		}
+		//@Override
+		//public void paintComponent(Graphics g) {
+			//for(Drawable d:drawables) {
+			//	d.drawIt(g);
+			//}
+		//}
 	}
 
 }

@@ -1,6 +1,10 @@
 package com.synthLife.Engine;
 
+import java.awt.Color;
+import java.awt.Graphics;
 import java.util.ArrayList;
+
+import com.synthLife.World.World;
 
 public final class Engine {
 
@@ -8,6 +12,9 @@ public final class Engine {
 	private boolean isRunning;
 	private boolean isClosed;
 	private long timeMillis;
+	private World world;
+	
+	
 	protected Engine(){
 		init();
 		run();
@@ -16,7 +23,7 @@ public final class Engine {
 	private void init() {
 		paintTool = new PaintTool("Genetic algorithm 0.1",900,600);
 		paintTool.draw(null);
-	
+		world = new World();
 		
 		timeMillis = 0;
 		isClosed = false;
@@ -29,30 +36,29 @@ public final class Engine {
 	
 			while(!isRunning) {
 				try {
+					//Pause//
 					this.wait();
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
 			}
-		
 			
-			updateGraphics();
-			
+			world.update();
+			drawSceen();	
 			timeMillis++;
 			try {
-				Thread.sleep(20);
+				Thread.sleep(800);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
 	}
 	
-	private void updateGraphics() {
-		ArrayList<Drawable> drawables = null;		
-		
-		
-		paintTool.draw(drawables);
+	private void drawSceen() {
+		Graphics g = paintTool.getGraphics();
+		world.draw(g);
 	}
+	
 	public boolean isRunning() {
 		return isRunning;
 	}
