@@ -1,12 +1,16 @@
 package com.synthLife.Engine;
 
 import java.awt.*;
+import java.util.ArrayList;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+@SuppressWarnings("serial")
 public class PaintTool extends JFrame{
 
+	
+	private ArrayList<Drawable> drawables;
 	private PaintPanel paintPanel;
 	
 	protected PaintTool(String title, int width, int height){
@@ -25,19 +29,23 @@ public class PaintTool extends JFrame{
 		return paintPanel;
 	}
 	
-	protected void update() {
+	protected void draw(ArrayList<Drawable> drawables) {
+		this.drawables = drawables;
 		paintPanel.repaint();
 	}
 	
-	class PaintPanel extends JPanel{
+	
+	
+	private class PaintPanel extends JPanel{
 		PaintPanel(){
 			setBackground(Color.blue);
 		}
 		
 		@Override
 		public void paintComponent(Graphics g) {
-			g.setColor(Color.black);
-			g.drawRect(0,0,100,100);
+			for(Drawable d:drawables) {
+				d.drawIt(g);
+			}
 		}
 	}
 
