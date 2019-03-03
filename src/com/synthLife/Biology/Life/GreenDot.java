@@ -7,6 +7,7 @@ public class GreenDot extends Organism {
 	
 	@Override
 	protected void eat() {
+		
 		// TODO Auto-generated method stub
 		
 	}
