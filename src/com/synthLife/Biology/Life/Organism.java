@@ -1,10 +1,10 @@
 package com.synthLife.Biology.Life;
 
+
 public abstract class Organism {
 	
 	private int x;
-	private int y;
-	
+	private int y;	
 	
 	
 	protected abstract void eat();
@@ -29,7 +29,5 @@ public abstract class Organism {
 	public void setY(int y) {
 		this.y = y;
 	}
-	
-	
 	
 }

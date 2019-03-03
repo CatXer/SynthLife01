@@ -1,13 +1,25 @@
 package com.synthLife.Biology.Life;
 
-public class GreenDot extends Organism {
+import java.awt.Graphics;
+
+import com.synthLife.Biology.Genetic.Genome;
+import com.synthLife.Engine.Drawable;
+
+public class GreenDot extends Organism implements Drawable {
 
 	
+	public Genome genome;
+
+	public GreenDot(int x, int y, Genome baseG) {
+		genome = baseG;
+		setX(x);
+		setY(y);
+		
+	}
 	
 	
 	@Override
 	protected void eat() {
-		
 		// TODO Auto-generated method stub
 		
 	}
@@ -22,6 +34,12 @@ public class GreenDot extends Organism {
 	protected void split() {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void drawIt(Graphics g) {
+		g.setColor(genome.getColorBody());
+		g.fillOval(getX(), getY(), 1, 1);		
 	}
 
 }

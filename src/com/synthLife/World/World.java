@@ -3,11 +3,10 @@ package com.synthLife.World;
 import java.awt.Graphics;
 import java.util.ArrayList;
 
+import com.synthLife.Engine.Engine;
+
 public class World {
 
-	public static final int WIDTH = 900;
-	public static final int HEIGHT = 600;
-	public static final int Qal = 10;
 	
 	private ArrayList<Field> map;
 	
@@ -17,9 +16,9 @@ public class World {
 	
 	private void initMap() {
 		map = new ArrayList<>();
-		for(int x = 0; x < WIDTH; x+=Qal) {
-			for(int y = 0; y < HEIGHT; y+=Qal)
-			map.add(new Field(x, y, Qal-1));
+		for(int x = 0; x < Engine.WIDTH; x+= Engine.Qal) {
+			for(int y = 0; y < Engine.HEIGHT; y+= Engine.Qal)
+			map.add(new Field(x, y, Engine.Qal-1));
 		}
 	}
 	

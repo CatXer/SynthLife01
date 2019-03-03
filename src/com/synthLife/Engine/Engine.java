@@ -10,6 +10,11 @@ public final class Engine {
 	private boolean isClosed;
 	private long timeMillis;
 	private World world;
+	public static final int WIDTH = 900;
+	public static final int HEIGHT = 600;
+	public static final int Qal = 10;
+
+
 	
 	
 	protected Engine(){
@@ -18,7 +23,7 @@ public final class Engine {
 	}
 	
 	private void init() {
-		paintTool = new PaintTool("Genetic algorithm 0.1",900,600);
+		paintTool = new PaintTool("Genetic algorithm 0.1",WIDTH,HEIGHT);
 		world = new World();
 		
 		timeMillis = 0;
