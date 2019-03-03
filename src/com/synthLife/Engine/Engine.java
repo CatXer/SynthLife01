@@ -48,7 +48,7 @@ public final class Engine {
 			drawSceen();	
 			timeMillis++;
 			try {
-				Thread.sleep(400);
+				Thread.sleep(10);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

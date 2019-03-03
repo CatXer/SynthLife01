@@ -10,6 +10,19 @@ public class GreenG extends Genome {
 		return null;
 	}
 
+	@Override
+	public Genome mutate() {
+		Genome newGenome = null;
+		try {
+			newGenome = (Genome)this.clone();
+		} catch (CloneNotSupportedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return newGenome;
+	}
+
 	
 	
 	

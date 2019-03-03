@@ -32,8 +32,7 @@ public class GreenDot extends Organism implements Drawable {
 
 	@Override
 	protected void split() {
-		// TODO Auto-generated method stub
-		
+		GreenDot newO =new GreenDot(0,0,genome.mutate());
 	}
 
 	@Override
