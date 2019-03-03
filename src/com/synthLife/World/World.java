@@ -7,7 +7,7 @@ public class World {
 
 	public static final int WIDTH = 900;
 	public static final int HEIGHT = 600;
-	public static final int Qal = 40;
+	public static final int Qal = 10;
 	
 	private ArrayList<Field> map;
 	

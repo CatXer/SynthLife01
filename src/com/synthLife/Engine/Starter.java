@@ -10,7 +10,6 @@ public class Starter {
 	
 	private static void StartEngine() {
 		engine = new Engine();
-		
 	}
 
 }
