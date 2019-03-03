@@ -1,9 +1,6 @@
 package com.synthLife.Engine;
 
-import java.awt.Color;
 import java.awt.Graphics;
-import java.util.ArrayList;
-
 import com.synthLife.World.World;
 
 public final class Engine {
@@ -22,7 +19,6 @@ public final class Engine {
 	
 	private void init() {
 		paintTool = new PaintTool("Genetic algorithm 0.1",900,600);
-		paintTool.draw(null);
 		world = new World();
 		
 		timeMillis = 0;
